@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RailsStore</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= render "nav" %>
+<div class='container'>
+  <%= content_tag :div, notice, class: "bg-success" %>
+  <%= content_tag :div, alert, class: "bg-danger" %>
+  <%= yield %>
+</div>
+
+</body>
+</html>
